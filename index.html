@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Family Book</title>
+    <style href="style.css"></style>
+</head>
+
+<body style="text-align: center;">
+    <h1>Family Book</h1>
+    <img id="image" src="https://images-na.ssl-images-amazon.com/images/I/91mwDyvpUcL.jpg" style="margin-top:100px; margin-bottom: 100px; width:200px;">
+    <h3 id="name" style="margin-bottom: 100px;">Names will come here</h3>
+    <button type="button" onclick="change()">Next</button>
+    <script>
+        var images = ["https://images-na.ssl-images-amazon.com/images/I/91mwDyvpUcL.jpg", "download.jpg", "mommy.jpg", "IMG_8734.jpg", "iya.jpg"];
+        var names = ["Family Book", "Lito Jarina", "Aileen Jarina", "Miguel Jarina", "Sophia Jarina"];
+        var i = 0;
+
+        function change() {
+            if (i == 4) {
+                i = 0;
+                document.getElementById("image").src = image[i];
+                document.getElementById("name").innerHTML = names[i];
+                console.log(images[i]);
+                console.log(names[i]);
+            } else {
+                document.getElementById("image").src = image[i];
+                document.getElementById("name").innerHTML = names[i];
+                console.log(images[i]);
+                console.log(names[i]);
+                i++;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
